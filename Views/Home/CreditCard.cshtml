@@ -1,0 +1,29 @@
+﻿@model Lab25.Models.Purchase
+
+@{
+    double price = @Model.Price;
+    double quantity = Model.Quantity;
+    double total = (price * quantity);
+}
+
+<h2>Enjoy your coffee @Model.Name</h2>
+<p>You purchsed "@Model.Description"</p>
+
+
+<p>You total is $@total dollars.</p>
+
+<form method="get" action="Recipte">
+    <h2>Please enter you credit card information</h2>
+
+    <input type="number" name="cardNumber" min="13" max="19" required />
+    <p>Credit Card Number</p>
+
+    <input type="text" name="expDate" min="5" max="5" required />
+    <p>Expiration Date</p>
+
+    <input type="text" name="CVC" min="3" max="3" required />
+    <p>CVC Code</p>
+
+    <input type="submit" value="Purchase" />
+
+</form>

@@ -1,0 +1,12 @@
+﻿@model  Lab25.Models.Purchase
+
+@{ 
+    double price = @Model.Price;
+    double quantity = Model.Quantity;
+    double total = (price *quantity);
+}
+
+<h2>Enjoy your coffee @Model.Name</h2>
+<p>You purchsed "@Model.Description"</p>
+<p>You payed us @total with you credit card.</p>
+<p>Thank you for you business we appreciate you!</p>
